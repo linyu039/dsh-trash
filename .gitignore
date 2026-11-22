@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Logs and diagnostics
+*.log
+logs/
+npm-debug.log*
+
+# Test leftovers
+test/**/*.tmp
+coverage/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local packaging
+*.tgz
+dist/

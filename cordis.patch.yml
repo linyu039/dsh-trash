@@ -1,0 +1,8 @@
+# dsh-trash bundle patch
+#
+# One plugin row. The Host half owns the three /trash/api routes and the real
+# storage work; the Client half adds the Trash page (a `main` panel keyed
+# `trash`), its sidebar panel row, and the per-Session entrance buttons.
+- insert:
+    - id: trash
+      name: 'dsh-trash'

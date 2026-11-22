@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Trash",
+    "description": "Collects every stored Session into one Trash page: batch-delete the session files on disk, or clear a conversation's content while keeping the session itself."
+  }
+}

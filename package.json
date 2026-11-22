@@ -1,0 +1,72 @@
+{
+  "name": "dsh-trash",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Trash panel for DeepSeek Harness: browse every stored Session, permanently delete its session file, or clear a conversation's content while keeping the session.",
+  "license": "MIT",
+  "author": {
+    "name": "dsh-trash contributors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linyu039/dsh-trash.git"
+  },
+  "homepage": "https://github.com/linyu039/dsh-trash#readme",
+  "bugs": {
+    "url": "https://github.com/linyu039/dsh-trash/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "cordis",
+    "session",
+    "sessions",
+    "trash",
+    "delete",
+    "cleanup"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/e2e.mjs && node test/client-smoke.mjs && node test/render-smoke.mjs",
+    "test:host": "node test/e2e.mjs",
+    "test:client": "node test/client-smoke.mjs && node test/render-smoke.mjs"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "icon": "./icon.svg"
+}
